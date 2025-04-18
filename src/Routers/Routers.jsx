@@ -14,7 +14,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home />
+                loader: () => fetch('phones.json'),
+                Component: Home
             },
             {
                 path: '/about',
